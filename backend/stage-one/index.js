@@ -11,10 +11,13 @@ app.get("/api/hello", async(req, res) => {
   try {
     const apiKey = "269e25333904429ca6012904240107"
     const weatherResponse = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${clientIP}`)
-    const weatherData = weatherResponse.data
-    const city = weatherData.location.name || "Unkown Location"
+    const weatherData = weatherResponse.data 
     const temperature = weatherData.current.temp_c;
 
+
+    const locationResponse = await axios.get(`https://ipapi.co/${clientIP}/json/`);
+    const locationData = locationResponse.data;
+    const city = locationData.city || 'Unknown Location';
     res.json({
       client_ip: clientIP,
       location: city,
