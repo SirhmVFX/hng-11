@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+li {
+  list-style: none;
+}
+
+.fab {
+  font-size: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.herosection {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+}
+
+.heroright {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  align-items: start;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.divcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.goalsection {
+  width: 90%;
+  margin-inline: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goals {
+  padding: 1rem;
+  border: 1px solid white;
+}
+
+.internship {
+  padding: 1rem;
+  background-color: rgba(33, 33, 33, 0.319);
+  width: 90%;
+  margin-inline: auto;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links > a {
+  text-decoration: underline;
+}
+
+.goals > h5 {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: blue;
+}
+
+@media (min-width: 60em) {
+  .herosection {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .divcontainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+}
