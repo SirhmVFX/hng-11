@@ -1,6 +1,13 @@
 function fetchAndDisplayUTCTime() {
   const timeElement = document.querySelector(".time");
-  const utcTime = new Date().getTime();
+  const now = new Date();
+  const utcHours = now.getUTCHours();
+  const utcMinutes = now.getUTCMinutes().toString().padStart(2, "0");
+  const utcSeconds = now.getUTCSeconds().toString().padStart(2, "0");
+  const amPm = utcHours >= 12 ? "PM" : "AM";
+  const hours12 = utcHours % 12 || 12; // Convert to 12-hour format
+
+  const utcTime = `${hours12}:${utcMinutes}:${utcSeconds} ${amPm}`;
   timeElement.innerHTML = `UTC Time: ${utcTime}`;
 }
 
